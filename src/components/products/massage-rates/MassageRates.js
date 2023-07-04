@@ -31,7 +31,7 @@ export default function MassageRates({ myRef }) {
               <PDetails to="/massages/sports">
                 <CImg src="/images/massages/card/sport.jpg" />
                 <CTitle>sportmassage</CTitle>
-                <CDes>Regio: Brummen +15km</CDes>
+                <CDes>Regio 't Gooi +15km</CDes>
               </PDetails>
               <Price price={65} time={60}>
                 <BookNow to="/appointments"></BookNow>
@@ -41,7 +41,7 @@ export default function MassageRates({ myRef }) {
               <PDetails to="/massages/shiatsu">
                 <CImg src="/images/massages/card/shiatsu.jpg" />
                 <CTitle>Shiatsumassage</CTitle>
-                <CDes>Regio: Brummen +15km</CDes>
+                <CDes>Regio 't Gooi +15km</CDes>
               </PDetails>
               <Price price={65} time={60}>
                 <BookNow to="/appointments"></BookNow>
@@ -51,7 +51,7 @@ export default function MassageRates({ myRef }) {
               <PDetails to="/massages/relaxation">
                 <CImg src="/images/massages/card/relax.jpg" />
                 <CTitle>Ontspanningsmassage</CTitle>
-                <CDes>Regio: Brummen +15km</CDes>
+                <CDes>Regio 't Gooi +15km</CDes>
               </PDetails>
               <Price price={65} time={60}>
                 <BookNow to="/appointments"></BookNow>
@@ -61,7 +61,7 @@ export default function MassageRates({ myRef }) {
               <PDetails to="/massages/chair">
                 <CImg src="/images/massages/card/chair.png" />
                 <CTitle>Stoelmassage</CTitle>
-                <CDes>Regio: Brummen +15km</CDes>
+                <CDes>Regio 't Gooi +15km</CDes>
               </PDetails>
               <Price price={35} time={30}>
                 <BookNow to="/appointments"></BookNow>
