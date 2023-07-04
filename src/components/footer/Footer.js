@@ -41,22 +41,22 @@ export default function Footer() {
           <div className="uppercase font-bold mb-2">Contact</div>
           <NL>
             <li className="py-2 flex justify-start items-start gap-2">
-              <Link
+              <a
                 to="tel:+31616040556"
                 className="flex gap-2 items-center hover:underline hover:underline-offset-4 hover:decoration-2 hover:translate-x-2 transition-all ease-in"
               >
                 <Call />
                 +31616040556
-              </Link>
+              </a>
             </li>
             <li className="py-2 flex justify-start items-start gap-2">
-              <Link
+              <a
                 to="mailto:info@iconimex.com"
                 className="flex gap-2 items-center hover:underline hover:underline-offset-4 hover:decoration-2 hover:translate-x-2 transition-all ease-in"
               >
                 <Envelope />
                 biz@ahmassage.nl
-              </Link>
+              </a>
             </li>
           </NL>
         </div>
