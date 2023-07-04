@@ -60,7 +60,7 @@ export default function Home() {
         <ClientSay></ClientSay>
         <Gallary></Gallary>
         <ContactFrom></ContactFrom>
-        <SercviceArea></SercviceArea>
+        <SercviceArea />
         <Footer></Footer>
       </div>
       <Chat></Chat>

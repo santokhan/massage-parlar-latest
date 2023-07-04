@@ -8,7 +8,7 @@ export default function SercviceArea({ children }) {
         <div className="flex flex-wrap md:flex-nowrap justify-center items-center">
           <div className="w-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.247498418907!2d5.3170459999999995!3d52.329656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63ddfac9d94ef%3A0x2b79920b38484cd1!2sBostuin%2020%2C%20Almere%2C%20Netherlands!5e0!3m2!1sen!2sbd!4v1688476055979!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d39034.040126354506!2d5.23501938882578!3d52.3046149789197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1st%20gooi!5e0!3m2!1sen!2sbd!4v1688502460440!5m2!1sen!2sbd"
               className="h-[360px] aspect-square rounded-full hover:rounded-xl border-2 border-green-500 transition-all ease-in duration-300"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

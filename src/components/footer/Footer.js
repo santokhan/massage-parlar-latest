@@ -4,6 +4,53 @@ import React from "react";
 import NavActive from "../header/navbar/NavActive";
 import { Link } from "react-router-dom";
 
+export const route_sitemap = [
+  {
+    name: "Thuis",
+    url: "/",
+  },
+  {
+    name: "Wat Betreft",
+    url: "/about",
+  },
+  {
+    name: "massages",
+    url: "/massages",
+  },
+  {
+    name: "contact",
+    url: "/contact",
+  },
+  {
+    name: "overzicht",
+    url: "/#overview",
+  },
+]
+
+export const route_massages = [
+  {
+    name: "sportmassage",
+    url: "/massages/sports",
+  },
+  {
+    name: "shiatsumassage",
+    url: "/massages/shiatsu",
+  },
+  {
+    name: "stoelmassage",
+    url: "/massages/chair",
+  },
+  {
+    name: "ontspanningsmassage",
+    url: "/massages/relaxation",
+  },
+  {
+    name: "Term's of services",
+    url: "/terms",
+  },
+]
+
+
 export default function Footer() {
   return (
     <footer className="px-4 relative bg-white">
@@ -18,24 +65,15 @@ export default function Footer() {
         </div>
         <div className="w-auto py-2 lg:py-0">
           <div className="uppercase font-bold mb-2">Sitemap</div>
-          <NL>
-            <NLink path="/">Thuis</NLink>
-            <NLink path="/about">Wat Betreft</NLink>
-            <NLink path="/massages">massages</NLink>
-            <NLink path="/contact">contact</NLink>
-            {/* <NLink path="/#overview">overview</NLink> */}
-            <NLink path="/#overview">overzicht</NLink>
-          </NL>
+          <ul>
+            {route_sitemap.map((e, i) => <NLink path={e.url} key={i}>{e.name}</NLink>)}
+          </ul>
         </div>
         <div className="w-auto py-2 lg:py-0 mr-12">
           <div className="uppercase font-bold mb-2">Massages</div>
-          <NL>
-            <NLink path="/massages/sports">sportmassage</NLink>
-            <NLink path="/massages/shiatsu">shiatsumassage</NLink>
-            <NLink path="/massages/chair">stoelmassage</NLink>
-            {/* <NLink path="/massages/relaxation">relaxation</NLink> */}
-            <NLink path="/massages/relaxation">ontspanningsmassage</NLink>
-          </NL>
+          <ul>
+            {route_massages.map((e, i) => <NLink path={e.url} key={i}>{e.name}</NLink>)}
+          </ul>
         </div>
         <div className="w-full sm:w-1/2 lg:w-3/12 py-2 lg:py-0">
           <div className="uppercase font-bold mb-2">Contact</div>
@@ -69,7 +107,7 @@ const linkClass =
   "hover:underline hover:underline-offset-4 hover:decoration-2 text-raisin font-medium  hover:translate-x-2 transition-all ease-in block py-2 ";
 
 export function NL({ children }) {
-  return <ul className="flex flex-col items-start">{children}</ul>;
+  return <ul>{children}</ul>;
 }
 export function NavItem({ children }) {
   return <li className="h-full relative capitalize">{children}</li>;

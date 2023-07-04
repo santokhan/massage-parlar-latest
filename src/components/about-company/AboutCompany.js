@@ -29,8 +29,7 @@ export default function About() {
               opbouw. Een gestemde stevige rug, nek schouder massage verfrist
               elke werknemer direkt. Voor particulieren bieden wij gereduceerde
               tarieven voor Sport of Ontspanningsmassages bij frequentie van 14
-              dagen of minder. Direct te boeken in regio Arnhem, Apeldoorn,
-              Deventer, Lochem, Zutphen, Doetinchem. De APK voor u lijf.
+              dagen of minder. Direct te boeken in regio 't Gooi.
               Professionele massages bij u thuis.
             </SDes>
             <div className="flex flex-nowrap gap-2 justify-end items-center lg:hidden py-3">

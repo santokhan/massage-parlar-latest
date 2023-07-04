@@ -31,6 +31,12 @@
     object-fit: cover;
 }
 
+.swiper-pagination-bullet {
+    background-color: #166534;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
 @media (width>768px) {
     .swiper-slide {
         text-align: center;
