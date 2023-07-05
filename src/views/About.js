@@ -12,7 +12,8 @@ export default function About() {
         <div className="Panel">
           <div className="Panel-section Panel-section--full Panel-header">
             <header className="PageHead">
-              <h1 className="PageHead-title">Wat is een lichaamsmassage?</h1>
+              {/* <h1 className="PageHead-title">Wat is een lichaamsmassage?</h1> */}
+              <h1 className="PageHead-title">Geraakt worden...</h1>
               <hr className="Splitter" />
             </header>
           </div>

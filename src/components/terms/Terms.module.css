@@ -6,9 +6,11 @@
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    color: rgb(79, 84, 91);
 }
 
 .terms div p {
-    color: #555;
     margin-bottom: 1rem;
+    font-size: 1rem;
+    color: rgb(79, 84, 91);
 }

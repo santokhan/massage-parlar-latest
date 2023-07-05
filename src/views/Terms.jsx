@@ -27,17 +27,17 @@ export default function Terms() {
                 <Header />
                 <div className="pt-20"></div>
                 <div className="max-w-7xl mx-auto flex flex-wrap justify-between px-4 border-b py-8 lg:py-16">
-                    <div className="text-sm font-medium text-gray-700">
-                        <h3 className="text-xl font-semibold">ALGEMENE VOORWAARDEN VAN MASSAGEWORKS</h3>
+                    <div className="w-full space-y-2">
+                        <div className="text-2xl font-semibold uppercase playfair text-center w-full">ALGEMENE VOORWAARDEN VAN MASSAGEWORKS</div>
+                        <p className="text-center w-full text-slate-400">
+                            MassageWorks(hierna: “MW”) &nbsp;is gevestigd te Bostuin 20.1
+                            &nbsp;geregistreerd als KOR onderneming bij de Belastingdienst onder kvk
+                            nummer 89363639.
+                        </p>
+                    </div>
 
+                    <div className="text-sm font-medium text-slate-400 mt-8">
                         <div className={[Styles.terms].join(" ")}>
-                            <div>
-                                <p>
-                                    MassageWorks(hierna: “MW”) &nbsp;is gevestigd te Bostuin 20.1
-                                    &nbsp;geregistreerd als KOR onderneming bij de Belastingdienst onder kvk
-                                    nummer 89363639.
-                                </p>
-                            </div>
 
                             <div>
                                 <h4>Artikel 1. Toepasselijkheid algemene voorwaarden</h4>
