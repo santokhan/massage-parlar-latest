@@ -80,7 +80,7 @@ export default function Footer() {
           <NL>
             <li className="py-2 flex justify-start items-start gap-2">
               <a
-                to="tel:+31616040556"
+                href="tel:+31616040556"
                 className="flex gap-2 items-center hover:underline hover:underline-offset-4 hover:decoration-2 hover:translate-x-2 transition-all ease-in"
               >
                 <Call />
@@ -89,7 +89,7 @@ export default function Footer() {
             </li>
             <li className="py-2 flex justify-start items-start gap-2">
               <a
-                to="mailto:info@iconimex.com"
+                href="mailto:info@iconimex.com"
                 className="flex gap-2 items-center hover:underline hover:underline-offset-4 hover:decoration-2 hover:translate-x-2 transition-all ease-in"
               >
                 <Envelope />

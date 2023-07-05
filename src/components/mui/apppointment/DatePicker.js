@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Mui
 import dayjs from "dayjs";
-import Stack from "@mui/material/Stack";
+// import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -14,7 +14,7 @@ import { Box } from "@mui/system";
 // Context
 import { AppointmentContext } from "../../../context/AppointmentContext";
 
-export function GetDateFromAPI() {}
+export function GetDateFromAPI() { }
 
 export default function MaterialUIPickers({ handleTimes }) {
   const { data, handleData } = useContext(AppointmentContext);

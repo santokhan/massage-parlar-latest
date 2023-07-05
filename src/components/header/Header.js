@@ -1,7 +1,7 @@
 import { useLayoutEffect, useState, useEffect } from "react";
-import Logo from "./logo/Logo";
+// import Logo from "./logo/Logo";
+// import Social from "../social/Social";
 import Navbar from "./navbar/Navbar";
-import Social from "../social/Social";
 import MobileMenu from "./navbar-mobile/Mobile";
 
 export default function Header({ children }) {

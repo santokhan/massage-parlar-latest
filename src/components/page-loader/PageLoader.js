@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+// import { useState } from "react";
 import logo from "../header/logo/logo.png";
 
 export default function PageLoader() {
-  const [load, setload] = useState(false);
+  // const [load, setload] = useState(false);
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center bg-[rgb(185,214,138)] from-[#012701] to-[#e3f1d8] fixed left-0 top-0 slide-up z-[2100]">

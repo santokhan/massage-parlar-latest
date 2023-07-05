@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PLayout from "../products/layout/PLayout";
-import PHeader, { PTitle, PIcon, PDes } from "../products/layout/PHeader";
+import PHeader, { PTitle } from "../products/layout/PHeader";
 import PMain from "../products/layout/PMain";
 //
 import img1 from "../../assets/images/gallery/1.jpg";
