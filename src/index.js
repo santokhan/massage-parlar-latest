@@ -16,6 +16,7 @@ import Contact from "./views/Contact";
 import MassageRelaxation from "./views/MassageRelaxation";
 
 import "./index.css";
+import Terms from "./views/Terms";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -28,7 +29,7 @@ root.render(
         <Route path="/pageloader" element={<PageLoader />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/terms" element={<MassageChair />}></Route>
+        <Route path="/terms" element={<Terms />}></Route>
         <Route path="/massages" element={<Massages />}></Route>
         <Route path="/massages/shiatsu" element={<MassageShiatsu />}></Route>
         <Route path="/massages/sports" element={<MassageSports />}></Route>
