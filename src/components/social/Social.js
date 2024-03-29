@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 export default function Social() {
   return <SocialIcon2></SocialIcon2>;
 }
+
 export function SocialIcon1() {
   return (
-    <div className="flex justify-center items-center gap-5 lg:gap-10">
-      <Link to="/" className="text-xl block icon-jump">
+    <div className="flex justify-center items-center gap-5 lg:gap-10 mt-4">
+      <Link to="/" className="text-xl  icon-jump hidden">
         <svg
           width="12"
           height="20"
@@ -20,7 +21,7 @@ export function SocialIcon1() {
           />
         </svg>
       </Link>
-      <Link to="/" className="text-xl block icon-jump">
+      <Link to="/" className="text-xl  icon-jump hidden">
         <svg
           width="21"
           height="20"
@@ -81,8 +82,8 @@ export function SocialIcon1() {
 }
 export function SocialIcon2() {
   return (
-    <div className="flex justify-center items-center gap-5 lg:gap-10">
-      <Link to="/" className="text-xl block icon-jump">
+    <div className="flex justify-center items-center gap-3 lg:gap-4">
+      <Link to="/" className="text-xl hide icon-jump">
         <svg
           width="21"
           height="20"
@@ -96,7 +97,7 @@ export function SocialIcon2() {
           />
         </svg>
       </Link>
-      <Link to="/" className="text-xl block icon-jump">
+      <Link to="/" className="text-xl hide icon-jump">
         <svg
           width="21"
           height="20"
@@ -138,10 +139,14 @@ export function SocialIcon2() {
           </defs>
         </svg>
       </Link>
-      <Link to="/" className="text-xl block icon-jump">
+      <a href="https://nl.linkedin.com/in/jan-morks-714b0a23" target="_blank" className="text-xl block icon-jump" rel="noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 448 512">
+          <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" fill="#2867B2" />
+        </svg>
+      </a>
+      <Link to="/" className="text-xl hidden icon-jump">
         <svg
-          width="25"
-          height="20"
+          className="w-6 h-6"
           viewBox="0 0 25 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

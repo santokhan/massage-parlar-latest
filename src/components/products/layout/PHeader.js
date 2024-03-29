@@ -4,9 +4,9 @@ export default function PHeader({ children }) {
 export function PIcon({ children }) {
   return <div className="flex justify-center">{children}</div>;
 }
-export function PTitle({ children }) {
+export function PTitle({ children, className }) {
   return (
-    <div className="text-2xl font-bold uppercase playfair">{children}</div>
+    <div className={`text-2xl font-bold uppercase playfair ${className}`}>{children}</div>
   );
 }
 export function PDes({ children }) {

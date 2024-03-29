@@ -18,12 +18,11 @@ export default function YoungLiving() {
     <div className="text-light-sky">
       <PageLoader></PageLoader>
       <Header></Header>
-      <div className="py-8"></div>
-      <SLayout>
+      {/* <div className="py-8"></div> */}
+      {/* <SLayout>
         <SHeader>
           <STitle>Experience Young Livings Essential Oil</STitle>
-          {/* <SDes>Here in practice or at your home!</SDes> */}
-          <SDes>Hier in de praktijk of bij u thuis!</SDes>
+          <SDes>Hier in de praktijk of bij u Home!</SDes>
         </SHeader>
         <SMain>
           <img
@@ -32,9 +31,11 @@ export default function YoungLiving() {
             className="w-full"
           />
         </SMain>
-        <YoungLivingVideo></YoungLivingVideo>
+      </SLayout> */}
+      <SLayout>
+        <YoungLivingVideo />
       </SLayout>
-      <Evenings></Evenings>
+      {/* <Evenings></Evenings> */}
       <Gallary></Gallary>
       <ContactFrom></ContactFrom>
       <Footer></Footer>

@@ -72,7 +72,7 @@ export function Form() {
             id="firstName"
             name="firstName"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
-            placeholder="John"
+            placeholder=""
             defaultValue={data.firstName}
             required
             onChange={(e) => {
@@ -86,14 +86,14 @@ export function Form() {
             className="block mb-2 text-sm font-medium text-textgray"
           >
             {/* Last Name */}
-            AchternaamAchternaam
+            Achternaam
           </label>
           <input
             type="text"
             id="lastName"
             name="lastName"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
-            placeholder="Doe"
+            placeholder=""
             defaultValue={data.lastName}
             required
             onChange={(e) => {
@@ -115,7 +115,7 @@ export function Form() {
             id="email"
             name="email"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
-            placeholder="info@ahmassage.nl"
+            placeholder="biz@ahmassage.nl"
             defaultValue={data.email}
             required
             onChange={(e) => {
@@ -136,7 +136,7 @@ export function Form() {
             id="phone"
             name="phone"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
-            placeholder="+2511 1668 6900"
+            placeholder=""
             defaultValue={data.phone}
             required
             onChange={(e) => {

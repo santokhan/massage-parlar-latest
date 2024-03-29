@@ -7,10 +7,11 @@ export default function YoungLivingVideo({ children }) {
       <SLayout>
         <div className="flex flex-wrap justify-center items-center">
           <div className="w-full xl:w-1/2 flex justify-center order-2">
+            {/* src="https://www.youtube.com/embed/_LtZz__6pvo" */}
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/_LtZz__6pvo"
+              src="https://www.youtube.com/embed/ygA_KGWrhEA"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -21,27 +22,13 @@ export default function YoungLivingVideo({ children }) {
           <div className="w-full xl:w-1/2 px-3 py-4 backdrop-blur-sm rounded-xl">
             <div className="flex flex-col gap-4 relative mb-4">
               {/* <STitle>Young Living Information Evening</STitle> */}
-              <STitle>Informatieavond Young Living</STitle>
+              <STitle>Tarieven bedrijfsmassage: 60,- per uur</STitle>
               <SDes className="">
-                Vanaf januari 2016 elke zaterdagavond informatieavonden absolute{" "}
-                <span className="font-semibold">
-                  Young Living Essential Oil!
-                </span>
+                Bedrijfsmassage op locatie.
+                Keuze uit stoelmassage of mat massage.
               </SDes>
-              <div>
-                <SDes>Van 19:00 tot 22:00 uur</SDes>
-                {/* <SDes>In practice in Vlaardingen</SDes> */}
-                <SDes>In de praktijk in Vlaardingen</SDes>
-              </div>
-              {/* <SDes>"What an enrichment this is for our family!"</SDes> */}
-              <SDes>"Wat een verrijking is dit voor ons gezin!"</SDes>
-              <SDes>
-                Kom jij ook? Aanmelden kan via het{" "}
-                <a href="#contact" className="text-green-800 hover:underline">
-                  {/* contact form */}contactformulier
-                </a>
-                .
-              </SDes>
+              <SDes>6 weken elke week of 14 dagen 30 minuten behandeling per persoon.</SDes>
+              <SDes>6 maanden elke week of 14 dagen 20 minuten behandeling per persoon.</SDes>
             </div>
           </div>
         </div>

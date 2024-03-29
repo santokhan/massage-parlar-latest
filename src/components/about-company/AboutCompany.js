@@ -30,7 +30,7 @@ export default function About() {
               elke werknemer direkt. Voor particulieren bieden wij gereduceerde
               tarieven voor Sport of Ontspanningsmassages bij frequentie van 14
               dagen of minder. Direct te boeken in regio 't Gooi.
-              Professionele massages bij u thuis.
+              Professionele massages bij u Home.
             </SDes>
             <div className="flex flex-nowrap gap-2 justify-end items-center lg:hidden py-3">
               <Link to="http://ahmassage.nl" className="font-semibold">

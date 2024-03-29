@@ -19,14 +19,11 @@ export default function Gallary() {
   const [limit, setlimit] = useState(6);
 
   return (
-    <PLayout id="overview">
-      <PHeader>
-        {/* <PTitle>Overview</PTitle> */}
-        <PTitle>OVERZICHT</PTitle>
-      </PHeader>
+    <PLayout id="overview" className={"lg:pt-8"}>
+      <PTitle className={'text-center'}>OVERZICHT</PTitle>
       <PMain>
         <ZoomView src={src} setsrc={setsrc}></ZoomView>
-        {sources.map((e, i) => {
+        {sources.slice(3, 4).map((e, i) => {
           if (i < limit) {
             return (
               <button

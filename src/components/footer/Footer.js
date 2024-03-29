@@ -3,14 +3,15 @@ import Social from "../social/Social";
 import React from "react";
 import NavActive from "../header/navbar/NavActive";
 import { Link } from "react-router-dom";
+import { Location } from "iconsax-react";
 
 export const route_sitemap = [
   {
-    name: "Thuis",
+    name: "Home",
     url: "/",
   },
   {
-    name: "Wat Betreft",
+    name: "About",
     url: "/about",
   },
   {
@@ -56,11 +57,13 @@ export default function Footer() {
     <footer className="px-4 relative bg-white">
       <div className="stripe-skew"></div>
       <div className="max-w-7xl mx-auto flex flex-wrap justify-between px-4 border-b py-8 lg:py-16 z-10">
-        <div className="w-full sm:w-1/2 lg:w-3/12 py-2 lg:py-0">
-          <LogoFooter />
-          <Subscribe></Subscribe>
-          <div className="flex justify-center xl:justify-start pb-4">
-            <Social></Social>
+        <div className="w-full sm:w-1/2 lg:w-3/12 py-2 lg:py-0 flex justify-start">
+          <div className="flex flex-col items-center">
+            <LogoFooter />
+            {/* <Subscribe/> */}
+            <div className="flex justify-center xl:justify-start py-4">
+              <Social />
+            </div>
           </div>
         </div>
         <div className="w-auto py-2 lg:py-0">
@@ -94,6 +97,19 @@ export default function Footer() {
               >
                 <Envelope />
                 biz@ahmassage.nl
+              </a>
+            </li>
+            <li className="py-2 flex justify-start items-start gap-2">
+              <a
+                href="mailto:info@iconimex.com"
+                className="flex gap-2 items-center hover:underline hover:underline-offset-4 hover:decoration-2 hover:translate-x-2 transition-all ease-in"
+              >
+                <Location className="w-5 h-5" />
+                <address>
+                  Ubuntulaan 31,
+                  1349EH,
+                  Almere
+                </address>
               </a>
             </li>
           </NL>
@@ -156,7 +172,7 @@ export function Copyright() {
   return (
     <div className="py-6">
       <div className="text-textgray text-center">
-        Copyright@2021 all right reserved
+        Copyright@{new Date().getFullYear()} all right reserved
       </div>
     </div>
   );

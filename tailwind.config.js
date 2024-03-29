@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       colors: {
         raisin: "#222326",
+        primary: {
+          5: "#cd5631"
+        },
         textgray: "#787878",
       },
     },

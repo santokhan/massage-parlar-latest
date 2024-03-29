@@ -18,8 +18,8 @@ export default function Navbar({ children }) {
   return (
     <nav>
       <ul className="hidden list-none lg:flex lg:items-stretch lg:justify-center">
-        <NavItem path="/">Thuis</NavItem>
-        <NavLink path="/about">Wat Betreft</NavLink>
+        <NavItem path="/">Home</NavItem>
+        <NavLink path="/about">About</NavLink>
         <li className="h-full py-5 px-6 relative capitalize">
           <button
             type="button"
