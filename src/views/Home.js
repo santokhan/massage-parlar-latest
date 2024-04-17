@@ -17,6 +17,7 @@ import Chat from "../components/Chat/Chat";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { green } from "@mui/material/colors";
+import Testimonial from "../components/testimonial/Testimonial";
 // import SLayout, {
 //   SHeader,
 //   SMain,
@@ -57,6 +58,7 @@ export default function Home() {
             </SMain>
           </div>
         </SLayout> */}
+        <Testimonial></Testimonial>
         <ClientSay></ClientSay>
         <Gallary></Gallary>
         <ContactFrom></ContactFrom>
