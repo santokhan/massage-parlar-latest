@@ -51,7 +51,7 @@ const Testimonial = () => {
                     <>
                         <div className="mt-8 flex justify-center gap-4 items-center flex-wrap">
                             {
-                                ratings.map((rating, i) => {
+                                ratings.slice(0, 3).map((rating, i) => {
                                     // const __html = generateHTML(rating.message)
                                     const src = urlFor(rating.image).url()
 
