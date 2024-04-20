@@ -7,8 +7,8 @@ export const ReviewForm = ({ refetch, closeModal }) => {
     const [formData, setFormData] = useState({
         name: '',
         message: '',
-        image: null,
-        imagePreview: null,
+        image: '',
+        imagePreview: '',
         ratings: 5,
     });
 
@@ -21,28 +21,32 @@ export const ReviewForm = ({ refetch, closeModal }) => {
     };
 
     const handleImageChange = (event) => {
-        const file = event.target.files[0];
+        const file = event.target.files?.[0];
 
-        if (file) {
-            const reader = new FileReader();
-
-            reader.onloadend = () => {
-                setFormData((prevData) => ({
-                    ...prevData,
-                    image: file,
-                    imagePreview: reader.result,
-                }));
-            };
-
-            reader.readAsDataURL(file);
-        } else {
-            setFormData((prevData) => ({
-                ...prevData,
-                image: null,
-                imagePreview: null,
-            }));
+        if (!file) {
+            console.error('No file selected');
+            return;
         }
+
+        setFormData(prevData => ({
+            ...prevData,
+            image: file,
+        }));
+
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            const imageDataUrl = e.target.result;
+
+            setFormData(prevData => ({
+                ...prevData,
+                imagePreview: imageDataUrl,
+            }));
+        };
+
+        reader.readAsDataURL(file);
     };
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -85,8 +89,8 @@ export const ReviewForm = ({ refetch, closeModal }) => {
             setFormData({
                 name: '',
                 message: '',
-                image: null,
-                imagePreview: null,
+                image: '',
+                imagePreview: '',
                 ratings: 5,
             });
             refetch();
@@ -117,7 +121,6 @@ export const ReviewForm = ({ refetch, closeModal }) => {
                         id="image"
                         name="image"
                         onChange={handleImageChange}
-                        value={formData.image}
                         className="hidden"
                     />
                     <span className="block text-center mt-1">
@@ -241,10 +244,10 @@ export default function WriteAReview({ refetch }) {
                                     <div className="bg-white p-6 rounded-md shadow-md">
                                         <h2 className="text-2xl font-semibold mb-4 text-center">Leave a Review</h2>
 
-                                        {/* <ReviewForm
+                                        <ReviewForm
                                             refetch={refetch}
                                             closeModal={closeModal}
-                                        /> */}
+                                        />
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>

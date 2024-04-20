@@ -48,16 +48,6 @@ export default function Home() {
         <WhyChooseUs />
         <WhatWeProvide />
         <MassageRates myRef={myRef} />
-        {/* <SLayout>
-          <div className="bg-white pt-10">
-            <SHeader>
-              <STitle>BOEK NU EEN AFSPRAAK</STitle>
-            </SHeader>
-            <SMain>
-              <Appointments></Appointments>
-            </SMain>
-          </div>
-        </SLayout> */}
         <Testimonial />
         <ClientSay />
         <Gallary />
