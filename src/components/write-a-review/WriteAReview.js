@@ -45,32 +45,63 @@ export default function WriteAReview({ refetch }) {
         }
     }
 
+
     function handleSubmit(event) {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        sanityClient.create({
-            _type: 'reviews',
-            image: formData.get('image'),
-            name: formData.get('name'),
-            message: formData.get('message'),
-        }).then(() => {
-            alert('Review submitted!');
+        // Extract image file and other form data
+        const image = formData.get('image'); // Get the File object for the image
+        const name = formData.get('name');
+        const message = formData.get('message');
 
-            // clear input
-            setFormData({
-                name: '',
-                message: '',
-                image: null,
-                imagePreview: null,
+        // // Ensure that all required data is present before proceeding
+        // if (!name || !message || !image) {
+        //     alert('Please fill out all required fields (name, message, image)');
+        //     return;
+        // }
+
+        // Upload image to Sanity asset store
+        const uploadTask = sanityClient.assets.upload('image', image);
+
+        uploadTask
+            .then(imageAsset => {
+                // Once image is uploaded, create the review document
+                return sanityClient.create({
+                    _type: 'reviews',
+                    image: {
+                        _type: 'image',
+                        asset: {
+                            _type: 'reference',
+                            _ref: imageAsset._id, // Reference to the uploaded image asset
+                        },
+                    },
+                    name: name,
+                    message: message,
+                });
             })
-            // refetch Ratings
-            refetch()
-        });
+            .then(() => {
+                // Review submitted successfully
+                alert('Review submitted!');
 
-        closeModal();
+                // Clear form input
+                setFormData({
+                    name: '',
+                    message: '',
+                    image: null,
+                    imagePreview: null,
+                });
+
+                // Optionally trigger a refetch of ratings or update the UI
+                refetch();
+            })
+            .catch(error => {
+                console.error('Error submitting review:', error);
+                alert('An error occurred while submitting the review. Please try again.');
+            });
+
+        closeModal(); // Assuming `closeModal` closes the review submission modal
     }
-
     return (
         <>
             <div className="">
@@ -153,6 +184,7 @@ export default function WriteAReview({ refetch }) {
                                                         value={formData.name}
                                                         onChange={handleInputChange}
                                                         className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border p-2.5"
+                                                        required
                                                     />
                                                 </div>
                                             </div>
@@ -167,6 +199,7 @@ export default function WriteAReview({ refetch }) {
                                                     onChange={handleInputChange}
                                                     rows={5}
                                                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border p-2.5"
+                                                    required
                                                 />
                                             </div>
 

@@ -17,7 +17,9 @@ export default sanityClient;
 const builder = imageUrlBuilder(sanityConfig)
 
 export function urlFor(source) {
-    return builder.image(source)
+    if ('asset' in source) {
+        return builder.image(source)
+    }
 }
 
 // Block content

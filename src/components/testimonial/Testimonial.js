@@ -59,7 +59,7 @@ const Testimonial = () => {
                                         <blockquote key={i} className="bg-white p-4 shadow-sm sm:p-6 rounded-lg flex-1 basis-[375px] max-w-sm space-y-4">
                                             <div className='flex gap-4 items-start'>
                                                 {
-                                                    null ?
+                                                    src ?
                                                         <img className='w-16 h-16 aspect-square overflow-hidden rounded-full object-cover flex-shrink-0'
                                                             alt=""
                                                             src={src}

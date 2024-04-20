@@ -3,7 +3,7 @@ import MassageRates from "../components/products/massage-rates/MassageRates";
 import Footer from "../components/footer/Footer";
 import ContactFrom from "../components/contact/ContactFrom";
 import Gallary from "../components/gallary/Gallary";
-import React, { useRef } from "react";
+import React, { Suspense, useRef } from "react";
 import SwiperSlider from "../components/hero-section/SwiperSlider";
 import About from "../components/about-company/AboutCompany";
 import MassageVertical from "../components/mui/tabs/MassageVertical";
@@ -58,7 +58,9 @@ export default function Home() {
             </SMain>
           </div>
         </SLayout> */}
-        <Testimonial></Testimonial>
+        <Suspense fallback={'Loading...'}>
+          <Testimonial></Testimonial>
+        </Suspense>
         <ClientSay></ClientSay>
         <Gallary></Gallary>
         <ContactFrom></ContactFrom>
