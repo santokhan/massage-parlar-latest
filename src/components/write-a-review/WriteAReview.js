@@ -57,54 +57,81 @@ export default function WriteAReview({ refetch }) {
         const message = formData.get('message');
         const ratings = formData.get('ratings');
 
-        // // Ensure that all required data is present before proceeding
-        // if (!name || !message || !image) {
-        //     alert('Please fill out all required fields (name, message, image)');
-        //     return;
-        // }
+        // Ensure that all required data is present before proceeding
+        if (!name || !message) {
+            alert('Please fill out all required fields (name, message, image)');
+            return;
+        } else {
+            if (image) {
+                // Upload image to Sanity asset store
+                const uploadTask = sanityClient.assets.upload('image', image);
 
-        // Upload image to Sanity asset store
-        const uploadTask = sanityClient.assets.upload('image', image);
+                uploadTask
+                    .then(imageAsset => {
+                        // Once image is uploaded, create the review document
+                        return sanityClient.create({
+                            _type: 'reviews',
+                            image: {
+                                _type: 'image',
+                                asset: {
+                                    _type: 'reference',
+                                    _ref: imageAsset._id, // Reference to the uploaded image asset
+                                },
+                            },
+                            name: name,
+                            message: message,
+                            ratings: ratings,
+                        });
+                    })
+                    .then(() => {
+                        // Review submitted successfully
+                        alert('Review submitted!');
 
-        uploadTask
-            .then(imageAsset => {
-                // Once image is uploaded, create the review document
-                return sanityClient.create({
+                        // Clear form input
+                        setFormData({
+                            name: '',
+                            message: '',
+                            image: null,
+                            imagePreview: null,
+                            ratings: 5,
+                        });
+
+                        // Optionally trigger a refetch of ratings or update the UI
+                        refetch();
+                    })
+                    .catch(error => {
+                        console.error('Error submitting review:', error);
+                        alert('An error occurred while submitting the review. Please try again.');
+                    });
+
+                closeModal(); // Assuming `closeModal` closes the review submission modal
+            } else {
+                sanityClient.create({
                     _type: 'reviews',
-                    image: {
-                        _type: 'image',
-                        asset: {
-                            _type: 'reference',
-                            _ref: imageAsset._id, // Reference to the uploaded image asset
-                        },
-                    },
                     name: name,
                     message: message,
                     ratings: ratings,
+                }).then(() => {
+                    // Review submitted successfully
+                    alert('Review submitted!');
+
+                    // Clear form input
+                    setFormData({
+                        name: '',
+                        message: '',
+                        image: null,
+                        imagePreview: null,
+                        ratings: 5,
+                    });
+
+                    // Optionally trigger a refetch of ratings or update the UI
+                    refetch();
+                }).catch(error => {
+                    console.error('Error submitting review:', error);
+                    alert('An error occurred while submitting the review. Please try again.');
                 });
-            })
-            .then(() => {
-                // Review submitted successfully
-                alert('Review submitted!');
-
-                // Clear form input
-                setFormData({
-                    name: '',
-                    message: '',
-                    image: null,
-                    imagePreview: null,
-                    ratings: 5,
-                });
-
-                // Optionally trigger a refetch of ratings or update the UI
-                refetch();
-            })
-            .catch(error => {
-                console.error('Error submitting review:', error);
-                alert('An error occurred while submitting the review. Please try again.');
-            });
-
-        closeModal(); // Assuming `closeModal` closes the review submission modal
+            }
+        }
     }
 
     return (
