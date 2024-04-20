@@ -46,12 +46,8 @@ export default function Header({ children }) {
             : "w-full h-16 lg:h-24 flex justify-between items-center px-4 shadow z-[100] b-white/75 bg-green-50/75 backdrop-blur-sm absolute top-0"
         }
       >
-        <Navbar></Navbar>
-        <MobileMenu></MobileMenu>
-        {/* <div className="mt-96">
-
-        <Testimonial></Testimonial>
-        </div> */}
+        <Navbar />
+        <MobileMenu />
       </header>
     </div>
   );

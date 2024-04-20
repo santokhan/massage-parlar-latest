@@ -40,14 +40,14 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <div className="text-light-sky relative bg-gray-50">
-        <PageLoader></PageLoader>
-        <Header></Header>
-        <SwiperSlider startScroll={startScroll}></SwiperSlider>
-        <About></About>
-        <MassageVertical></MassageVertical>
-        <WhyChooseUs></WhyChooseUs>
-        <WhatWeProvide></WhatWeProvide>
-        <MassageRates myRef={myRef}></MassageRates>
+        <PageLoader />
+        <Header />
+        <SwiperSlider startScroll={startScroll} />
+        <About />
+        <MassageVertical />
+        <WhyChooseUs />
+        <WhatWeProvide />
+        <MassageRates myRef={myRef} />
         {/* <SLayout>
           <div className="bg-white pt-10">
             <SHeader>
@@ -58,14 +58,12 @@ export default function Home() {
             </SMain>
           </div>
         </SLayout> */}
-        <Suspense fallback={'Loading...'}>
-          <Testimonial></Testimonial>
-        </Suspense>
-        <ClientSay></ClientSay>
-        <Gallary></Gallary>
-        <ContactFrom></ContactFrom>
+        <Testimonial />
+        <ClientSay />
+        <Gallary />
+        <ContactFrom />
         <SercviceArea />
-        <Footer></Footer>
+        <Footer />
       </div>
       <Chat></Chat>
     </ThemeProvider>
