@@ -1,6 +1,5 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
-import blockContentToHtml from '@sanity/block-content-to-html';
 
 const sanityConfig = {
     projectId: 'onqbxcsz',
@@ -13,31 +12,10 @@ const sanityConfig = {
 const sanityClient = createClient(sanityConfig);
 export default sanityClient;
 
-// Image builder
 const builder = imageUrlBuilder(sanityConfig)
 
 export function urlFor(source) {
-    if ('asset' in source) {
+    if (source) {
         return builder.image(source)
     }
-}
-
-// Block content
-// Define serializers for marks
-const serializers = {
-    marks: {
-        span: (text) => `<span>${text}</span>`,
-        strong: (text) => `<strong>${text}</strong>`,
-        link: ({ mark, children }) => `<a href="${mark.href}">${children}</a>`,
-    },
-};
-
-export function generateHTML(sanityPortableText) {
-    // Convert Sanity Portable Text to HTML
-    const html = blockContentToHtml({
-        blocks: sanityPortableText,
-        serializers: serializers,
-    });
-
-    return html;
 }

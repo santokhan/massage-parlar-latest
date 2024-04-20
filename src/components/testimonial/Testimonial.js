@@ -1,26 +1,13 @@
 import { ArrowRight, User } from 'iconsax-react'
 import React, { useEffect } from 'react'
-import axios from 'axios'
 import WriteAReview from '../write-a-review/WriteAReview';
-import sanityClient, { generateHTML, urlFor } from '../../sanity/sanityClient';
+import sanityClient, { urlFor } from '../../sanity/sanityClient';
 
 
 const Testimonial = () => {
     const [ratings, setRatings] = React.useState(null);
 
     function fetchRatings() {
-        // axios
-        //     .get('/api/ratings.json')
-        //     .then((res) => {
-        //         const data = res.data
-        //         if (data) {
-        //             setRatings(data)
-        //         }
-        //     })
-        //     .catch((err) => {
-        //         console.log(err)
-        //     })
-
         const q = `*[_type == "reviews"]`
         sanityClient.fetch(q).then((data) => {
             if (data) {
@@ -52,8 +39,7 @@ const Testimonial = () => {
                         <div className="mt-8 flex justify-center gap-4 items-center flex-wrap">
                             {
                                 ratings.slice(0, 3).map((rating, i) => {
-                                    // const __html = generateHTML(rating.message)
-                                    const src = urlFor(rating.image).url()
+                                    const src = urlFor(rating.image)
 
                                     return (
                                         <blockquote key={i} className="bg-white p-4 shadow-sm sm:p-6 rounded-lg flex-1 basis-[375px] max-w-sm space-y-4">
@@ -61,8 +47,8 @@ const Testimonial = () => {
                                                 {
                                                     src ?
                                                         <img className='w-16 h-16 aspect-square overflow-hidden rounded-full object-cover flex-shrink-0'
-                                                            alt=""
-                                                            src={src}
+                                                            alt="user"
+                                                            src={src.url()}
                                                         />
                                                         :
                                                         <div className='bg-gray-50 rounded-full w-16 h-16 flex-shrink-0 p-3'><User className='w-full h-full' /></div>
@@ -80,7 +66,6 @@ const Testimonial = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            {/* <div className="leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html }}></div> */}
                                             <p className="leading-relaxed text-gray-700" >
                                                 {rating.message}
                                             </p>
