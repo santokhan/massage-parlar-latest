@@ -122,7 +122,6 @@ export default function WriteAReview({ refetch }) {
                     <span className="font-medium whitespace-nowrap">Write a review</span>
                     <ArrowRight className='w-5 h-5' />
                 </button>
-
             </div>
 
             <Transition appear show={isOpen} as={Fragment}>
