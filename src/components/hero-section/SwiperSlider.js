@@ -1,20 +1,18 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 import "./swiper-slider.css";
 
-// import required modules
 import { Pagination, Autoplay, Navigation } from "swiper";
 import HeroSection from "./HeroSection";
 import HeroSection1 from "./HeroSection1";
 import HeroSection2 from "./HeroSection2";
+import headerImg from '../../assets/images/ahmassage-header.jpg'
 
-export default function SwiperSlider({ startScroll }) {
+function SwiperSlider({ startScroll }) {
   return (
     <>
       <Swiper
@@ -29,19 +27,21 @@ export default function SwiperSlider({ startScroll }) {
         }}
         loop={true}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
           <HeroSection startScroll={startScroll}></HeroSection>
         </SwiperSlide>
-        <SwiperSlide>
-          <HeroSection1 startScroll={startScroll}></HeroSection1>
-        </SwiperSlide>
-        <SwiperSlide>
-          <HeroSection2 startScroll={startScroll}></HeroSection2>
-        </SwiperSlide>
       </Swiper>
     </>
   );
 }
+
+const HeaderImage = () => {
+  return <>
+    <img src={headerImg} alt="header" className="w-full min-h-svh object-cover" />
+  </>;
+};
+
+export default HeaderImage;
