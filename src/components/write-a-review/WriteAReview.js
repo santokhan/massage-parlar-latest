@@ -10,6 +10,7 @@ export default function WriteAReview({ refetch }) {
         message: '',
         image: null,
         imagePreview: null,
+        ratings: 0,
     });
 
     function closeModal() {
@@ -102,6 +103,14 @@ export default function WriteAReview({ refetch }) {
 
         closeModal(); // Assuming `closeModal` closes the review submission modal
     }
+
+    function handleRatingChange(event) {
+        setFormData((prevData) => ({
+            ...prevData,
+            rating: event.target.value,
+        }));
+    }
+
     return (
         <>
             <div className="">
@@ -201,6 +210,24 @@ export default function WriteAReview({ refetch }) {
                                                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border p-2.5"
                                                     required
                                                 />
+                                            </div>
+
+                                            <div className="space-y-1">
+                                                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Ratings</label>
+                                                <div className="flex gap-1 items-center text-yellow-500">
+                                                    {
+                                                        Array(5).fill(null).map((_, i) => (
+                                                            <Fragment key={i}>
+                                                                <div>
+                                                                    <input type="radio" name="rating" value={i + 1} onChange={handleRatingChange} checked={formData.rating === i + 1} />
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5 flex-shrink-0">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                                                    </svg>
+                                                                </div>
+                                                            </Fragment>
+                                                        ))
+                                                    }
+                                                </div>
                                             </div>
 
                                             {/* Submit Button */}
