@@ -3,7 +3,7 @@ import { useLayoutEffect, useState, useEffect } from "react";
 // import Social from "../social/Social";
 import Navbar from "./navbar/Navbar";
 import MobileMenu from "./navbar-mobile/Mobile";
-import Testimonial from "../testimonial/Testimonial";
+// import Testimonial from "../testimonial/Testimonial";
 
 
 export default function Header({ children }) {

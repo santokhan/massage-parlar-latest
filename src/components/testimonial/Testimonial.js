@@ -1,6 +1,5 @@
 import { ArrowRight, User } from 'iconsax-react'
 import React, { useEffect } from 'react'
-import axios from 'axios'
 import WriteAReview from '../write-a-review/WriteAReview';
 import sanityClient, { generateHTML, urlFor } from '../../sanity/sanityClient';
 
@@ -9,18 +8,7 @@ const Testimonial = () => {
     const [ratings, setRatings] = React.useState(null);
 
     function fetchRatings() {
-        // axios
-        //     .get('/api/ratings.json')
-        //     .then((res) => {
-        //         const data = res.data
-        //         if (data) {
-        //             setRatings(data)
-        //         }
-        //     })
-        //     .catch((err) => {
-        //         console.log(err)
-        //     })
-
+       
         const q = `*[_type == "reviews"]`
         sanityClient.fetch(q).then((data) => {
             if (data) {
