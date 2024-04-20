@@ -52,7 +52,7 @@ const Testimonial = () => {
                         <div className="mt-8 flex justify-center gap-4 items-center flex-wrap">
                             {
                                 ratings.map((rating, i) => {
-                                    const __html = generateHTML(rating.message)
+                                    // const __html = generateHTML(rating.message)
                                     const src = urlFor(rating.image).url()
 
                                     return (
@@ -80,7 +80,10 @@ const Testimonial = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html }}></div>
+                                            {/* <div className="leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html }}></div> */}
+                                            <p className="leading-relaxed text-gray-700" >
+                                                {rating.message}
+                                            </p>
                                         </blockquote>
                                     )
                                 })
