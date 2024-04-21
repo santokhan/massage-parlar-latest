@@ -1,6 +1,6 @@
 import Title from "./Title";
 
-export default function HeroSection1({ startScroll }) {
+export default function HeroSection1() {
   return (
     <div className="slide-2 flex justify-center items-center h-full w-full">
       <div className="effec w-full h-full flex justify-center items-center">
