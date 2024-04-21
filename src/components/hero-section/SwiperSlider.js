@@ -31,7 +31,10 @@ function SwiperSlider({ startScroll }) {
         className="mySwiper"
       >
         <SwiperSlide>
-          <HeroSection startScroll={startScroll}></HeroSection>
+          <HeroSection startScroll={startScroll}/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <HeroSection1 startScroll={startScroll}/>
         </SwiperSlide>
       </Swiper>
     </>
@@ -44,4 +47,4 @@ const HeaderImage = () => {
   </>;
 };
 
-export default HeaderImage;
+export default SwiperSlider;
