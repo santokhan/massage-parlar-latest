@@ -24,6 +24,4 @@ yarn-error.log*
 
 # Santo
 *.zip
-old-website-massage-jan-morks
 build/
-build-publish/
