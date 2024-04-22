@@ -18,7 +18,7 @@ function SwiperSliderStatic() {
       spaceBetween={0}
       centeredSlides={true}
       autoplay={{
-        delay: 6000,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       pagination={{
@@ -26,7 +26,7 @@ function SwiperSliderStatic() {
       }}
       loop={true}
       navigation={true}
-      modules={[Pagination]}
+      modules={[Pagination, Autoplay]}
       className="mySwiper"
     >
       <SwiperSlide>
