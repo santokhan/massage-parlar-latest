@@ -5,8 +5,6 @@ const HeaderImage = () => {
   return (
     <div>
         <img className='w-full h-[600px]' src={image}></img>
-    
-      
     </div>
   )
 }
