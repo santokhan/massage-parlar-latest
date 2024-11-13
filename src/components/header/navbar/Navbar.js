@@ -74,7 +74,7 @@ export default function Navbar({ children }) {
             </div>
             {/* <NLink to="/ahmassage">ah massage</NLink> */}
             <NLink to="/contact">contact</NLink>
-            <NItem to="/living">Bedrijfsmassages</NItem>
+            <NItem to="/stoelmassage">Bedrijfsmassages</NItem>
           </ul>
         </div>
       </div>

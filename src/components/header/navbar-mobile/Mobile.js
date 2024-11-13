@@ -61,7 +61,7 @@ export default function Navbar({ children }) {
                 </div>
                 {/* <DDLink to="/ahmassage">ah massage</DDLink> */}
                 <DDLink to="/contact">contact</DDLink>
-                <DDItem to="/living">Bedrijfsmassages</DDItem>
+                <DDItem to="/stoelmassage">Bedrijfsmassages</DDItem>
               </ul>
             </div>
           ) : (

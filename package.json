@@ -17,9 +17,9 @@
     "dayjs": "^1.11.7",
     "iconsax-react": "^0.0.8",
     "postcss": "^8.4.20",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "react-slideshow-image": "^4.1.1",
     "swiper": "^8.4.5",
@@ -54,7 +54,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@webpack-cli/generators": "^3.0.1",
-    "tailwindcss": "^3.2.4",
+    "tailwindcss": "^3.4.14",
     "webpack-cli": "^5.0.1"
   }
 }
